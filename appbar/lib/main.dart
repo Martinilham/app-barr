@@ -13,7 +13,7 @@ class HalamanUtama extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 117, 193, 255),
+      
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 7, 144, 255),
         leading: const Icon(Icons.home),
@@ -23,26 +23,50 @@ class HalamanUtama extends StatelessWidget{
           Icon(Icons.search)
         ],
       ),
-      body: Container(
-        margin: const EdgeInsets.only(
-          top: 4.0,
-          left: 2.0,
-          right: 2.0
-        ),
-        width: 280.0,
-        height: 100.0,
-        color: const Color.fromARGB(255, 0, 55, 206),
-        child: 
-        const Center(
-          child: Row(
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.topCenter,
+            color: const Color.fromARGB(255, 117, 193, 255),
+            margin: const EdgeInsets.only(
+              top: 8.0
+            ),
+            width: 280.0,
+            height: 100.0,
+          ),
+         Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.home),
-              Text("Degan Ijo")
+              Container(
+                color: const Color.fromARGB(255, 117, 193, 255),
+                child: const SizedBox(
+                width: 100, 
+                height: 50, 
+                child: Text('Box 1')
+                ),
+              ),
+              Container(
+                color: const Color.fromARGB(255, 117, 193, 255),
+                child: const SizedBox(
+                width: 100, 
+                height: 50, 
+                child: Text('Box 2')
+                ),
+              ),
+              Container(
+                color: const Color.fromARGB(255, 117, 193, 255),
+                child: const SizedBox(
+                width: 100, 
+                height: 50, 
+                child: Text('Box 3')
+                ),
+              )
             ],
-          ),
-        )
+          )
+        ],
       )
+      
     );
   }
 }
+
